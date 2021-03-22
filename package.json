@@ -1,0 +1,59 @@
+{
+  "name": "vite-jest",
+  "version": "0.0.1",
+  "description": "vite jest plugin",
+  "main": "dist/index.js",
+  "workspaces": [
+    "."
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build-dist": "tsc",
+    "build": "run-s prebuild build-dist ",
+    "dev": "tsc -w --incremental",
+    "lint": "eslint src --ext .ts",
+    "prebuild": "rimraf dist && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axe-me/vite-jest.git"
+  },
+  "keywords": [
+    "vite",
+    "vite-jest",
+    "jest"
+  ],
+  "author": "Axe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axe-me/vite-jest/issues"
+  },
+  "homepage": "https://github.com/axe-me/vite-jest#readme",
+  "dependencies": {
+    "@rollup/pluginutils": "^4.1.0",
+    "chalk": "^4.1.0",
+    "debug": "^4.3.1"
+  },
+  "peerDependencies": {
+    "jest": "^27.0.0-next.5",
+    "vite": "^2.1.2"
+  },
+  "devDependencies": {
+    "@jest/transform": "27.0.0-next.5",
+    "@types/debug": "^4.1.5",
+    "@types/estree": "^0.0.46",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "27.0.0-next.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.3",
+    "vite": "^2.1.2"
+  }
+}
